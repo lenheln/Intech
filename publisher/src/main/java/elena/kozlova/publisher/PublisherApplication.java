@@ -1,15 +1,12 @@
 package elena.kozlova.publisher;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.concurrent.atomic.AtomicLong;
-
+/**
+ * Модуль Publisher
+ * Генерирует сообщения в 5 потоков с задержкой между сообщениями в каждом потоке на 15 секунд
+ */
 public class PublisherApplication {
 
+	//Количество потоков
 	private final static int THREADS_COUNT = 5;
 
 	public static void main(String[] args) {
